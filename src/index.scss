@@ -1,0 +1,21 @@
+$primary: #1c4969;
+$secondary: #0d1957;
+$dark: #0d1957;
+$light: #acd2b0;
+$success: #fec98c;
+$info: #eaee17;
+$warning: #ad2fdf;
+$danger: red;
+$body-color: $primary;
+$body-bg: rgb(251, 247, 247);
+
+$link-color: $secondary;
+$link-hover-color: $primary;
+$component-active-bg: $dark;
+
+:export {
+    primary: $primary;
+    secondary: $secondary;
+}
+
+@import "~bootstrap/scss/bootstrap.scss";

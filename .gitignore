@@ -1,9 +1,22 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# envariomental vars
+.env
+
+# doctos
+*.doc
+*.pptx
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+
+# firebase
+.firebase/
+.firebaserc
+firebase.json
+
 
 # testing
 /coverage
