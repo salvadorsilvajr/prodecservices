@@ -22,6 +22,9 @@ import { ContextTheme } from "../context/ContextTheme";
 import { useEffect } from "react";
 
 const CrearCuenta = ({ location, match }) => {
+    // get paramms with the help of useParams from react-router-dom
+    // const { id } = useParams();
+
     const id = match.params.id;
 
     // const docRef = doc(db, "catalago", id);
@@ -40,7 +43,7 @@ const CrearCuenta = ({ location, match }) => {
     const [objetivo, setObjetivo] = useState("");
     const [preview, setPreview] = useState(null);
     const [progress, setProgress] = useState(0);
-    const [urlImage, setUrlImage] = useState("../images/imagehere.png");
+    const [urlImage, setUrlImage] = useState("");
     const [file, setFile] = useState("");
     const [message, setMessage] = useState(null);
     // const [profilePic, setProfilePic] = useState(ProfilePic);
@@ -54,6 +57,7 @@ const CrearCuenta = ({ location, match }) => {
     useEffect(() => {
         const docRef = doc(db, "catalago", id);
         getDoc(docRef).then((doc) => {
+            console.log(doc.data().especialidad);
             setCategoria(doc.data().categoria);
             setEspecialidad(doc.data().especialidad);
             setDuracion(doc.data().duracion);
@@ -253,7 +257,7 @@ const CrearCuenta = ({ location, match }) => {
                             <Row style={{ padding: "2em 0" }}>
                                 <Col>
                                     <Form.Label htmlFor='categoria'>
-                                        categoria
+                                        Categoria
                                     </Form.Label>
                                     <Form.Select
                                         required
@@ -306,12 +310,15 @@ const CrearCuenta = ({ location, match }) => {
                         </Form.Group> */}
                         <Form.Group controlId='especialidad'>
                             {/* <Form.Label>Curso Especialidad</Form.Label> */}
+                            <Form.Label htmlFor='nombrecurso'>
+                                Nombre del Curso
+                            </Form.Label>
                             <Form.Control
                                 type='text'
                                 placeholder='Curso Especialidad'
-                                value={especialidad1}
+                                value={especialidad}
                                 onChange={(e) =>
-                                    setEspecialidad1(e.target.value)
+                                    setEspecialidad(e.target.value)
                                 }
                             ></Form.Control>
                         </Form.Group>

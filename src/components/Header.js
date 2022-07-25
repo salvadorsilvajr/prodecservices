@@ -48,7 +48,7 @@ const Header = () => {
 
     return (
         <header>
-            <Navbar expand='lg' bg='light' variant='light'>
+            <Navbar expand='lg' variant='light'>
                 <Container fluid>
                     <Navbar.Brand href='/'>
                         <Image className='mylogo' fluid src={Logo}></Image>

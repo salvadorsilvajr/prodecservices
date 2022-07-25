@@ -1,18 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, Col } from "react-bootstrap";
+import imagehere from "../images/imagehere.png";
 
 import Rating from "./Rating";
 
 const Product = ({ product }) => {
     return (
         <Col sm={12} md={4}>
-            <Card className='my-3 p-3 rounded'>
+            <Card
+                className='my-3 p-3 rounded productCard'
+                // style={{ background: "beige", minHeight: "24em" }}
+            >
                 <Link to={`/product/${product.id}`}>
                     <Card.Img
-                        style={{ maxHeight: "14em" }}
-                        className='displaynone'
-                        src={product.url}
+                        // style={{ Height: "24em" }}
+                        className='displaynone, productImageCard'
+                        src={product.url ? product.url : imagehere}
                         variant='top'
                     />
                 </Link>

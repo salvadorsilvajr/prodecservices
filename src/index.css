@@ -112,8 +112,8 @@ h2 {
 }
 
 .titlecategoria {
-    font-family: "Abril Fatface", cursive;
-    background-color: #92aa94;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #7ad981;
     color: #0d1957;
 }
 
@@ -122,6 +122,17 @@ h2 {
 }
 .carimg {
     width: 9em;
+}
+.productCard {
+    background: beige;
+    height: 24em;
+}
+
+.productImageCard{
+    height: 10em;
+    width: 15em;
+    object-fit: cover ;
+
 }
 .productsreenItem {
     height: 24em;
@@ -155,7 +166,15 @@ h2 {
     .productscreenImage {
         height: 25em;
     }
-    .displaynone {
+    .productCard {
+        background: beige;
+        height: auto;
+    }
+    
+    .productImageCard{
+        height: 10em;
+        width: 15em;
+        object-fit: cover ;
         display: none;
     }
     .carimg {
